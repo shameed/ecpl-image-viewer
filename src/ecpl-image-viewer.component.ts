@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Renderer2, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'ecpl-image-viewer',
-  templateUrl: '/src/ecpl-image-viewer.component.html',
+  templateUrl: './ecpl-image-viewer.component.html',
   styleUrls: ['../src/ecpl-image-viewer.component.css']
 })
 export class EcplImageViewerComponent implements OnInit {
