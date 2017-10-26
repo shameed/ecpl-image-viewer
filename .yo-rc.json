@@ -1,0 +1,14 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "shameed",
+    "githubRepoName": "ecpl-image-viewer",
+    "npmModuleName": "ecpl-image-viewer",
+    "moduleGlobal": "ecplImageViewer",
+    "ngModuleName": "EcplImageViewerModule",
+    "selectorPrefix": "ecpl",
+    "projectTitle": "Ecpl Image Viewer",
+    "projectDescription": "Angular4 library for image viewer in a popup",
+    "authorName": "Hameed",
+    "packageManager": "npm"
+  }
+}
