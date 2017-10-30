@@ -1,6 +1,6 @@
 {
     "name": "ecpl-image-viewer",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Angular4 library for image viewer in a popup",
     "main": "./bundles/ecpl-image-viewer.umd.js",
     "module": "./index.js",
