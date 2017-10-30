@@ -4,14 +4,14 @@ import { Component, OnInit, Input, Renderer2, OnDestroy } from '@angular/core';
   selector: 'ecpl-image-viewer',
   template: `
   <a href="javascript:void(0)" (click)="showModal()" id="img-file-{{id}}">
-      <img src="/src/images/{{imgType}}.png" alt="Image File">
+      <img src="/assets/{{imgType}}.png" alt="Image File">
   </a>
 
   <div class="img-modal" *ngIf="showModalWindow" id="img-pop-{{id}}">
       <div class="modal-dialog">
           <div class="modal-header">
               <div style="padding: 5px;">
-                  <img src="/src/images/{{imgType}}.png" alt="Image File" class="img-icon-header pull-left">
+                  <img src="/assets/{{imgType}}.png" alt="Image File" class="img-icon-header pull-left">
                   <h3 class="pull-left">{{imgName}}</h3>
               </div>
               <button (click)="hideModal()" class="pull-right">x</button>
