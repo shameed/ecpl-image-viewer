@@ -287,9 +287,6 @@
     </li>
 
     <li>
-        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-    </li>
-    <li>
         <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
     </li>
 </ul>
@@ -333,17 +330,108 @@
                 <td class="col-md-9"><code>ecpl-image-viewer</code></td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>.src/ecpl-image-viewer.component.css</code></td>
-            </tr>
-
-
 
             <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./ecpl-image-viewer.component.html</code></td>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+    .img-modal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10001;
+    padding: 15px;
+    }
+
+    .modal-dialog {
+        background-color: #fff;
+        border: 1px solid #f2f2f2;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    .modal-header {
+        height: 6%;
+        padding: 5px;
+        display: table-row
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    button.pull-right {
+        padding: 0 12px;
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 1px solid #dedede;
+        color: #dedede;
+    }
+
+    .modal-body {
+        width: 100%;
+        max-height: 94%;
+        overflow: auto;
+        padding: 5px;
+        background: #dedede;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .modal-body .scroller {
+        max-height: 94%;
+        overflow: auto;
+    }
+
+    .img-icon-header {
+        width: 20px;
+        height: auto;
+    }
+    </code></td>
             </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;a href&#x3D;&quot;javascript:void(0)&quot; (click)&#x3D;&quot;showModal()&quot; id&#x3D;&quot;img-file-{{id}}&quot;&gt;
+    &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
+&lt;/a&gt;
+
+&lt;div class&#x3D;&quot;img-modal&quot; *ngIf&#x3D;&quot;showModalWindow&quot; id&#x3D;&quot;img-pop-{{id}}&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+            &lt;div style&#x3D;&quot;padding: 5px;&quot;&gt;
+                &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
+                &lt;h3 class&#x3D;&quot;pull-left&quot;&gt;{{imgName}}&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;button (click)&#x3D;&quot;hideModal()&quot; class&#x3D;&quot;pull-right&quot;&gt;x&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+            &lt;div class&#x3D;&quot;scroller&quot;&gt;
+                &lt;img [src]&#x3D;&quot;imgSrc&quot; alt&#x3D;&quot;&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></td>
+            </tr>
+
 
 
         </tbody>
@@ -423,7 +511,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/ecpl-image-viewer.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/ecpl-image-viewer.component.ts:107</a></div>
                                 </td>
                             </tr>
     
@@ -477,7 +565,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/ecpl-image-viewer.component.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/ecpl-image-viewer.component.ts:103</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -498,7 +586,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/ecpl-image-viewer.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/ecpl-image-viewer.component.ts:105</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -519,7 +607,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/ecpl-image-viewer.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/ecpl-image-viewer.component.ts:104</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -540,7 +628,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/ecpl-image-viewer.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/ecpl-image-viewer.component.ts:106</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -572,7 +660,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/ecpl-image-viewer.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/ecpl-image-viewer.component.ts:116</a></div>
                                 </td>
                             </tr>
     
@@ -604,7 +692,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/ecpl-image-viewer.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/ecpl-image-viewer.component.ts:111</a></div>
                                 </td>
                             </tr>
     
@@ -648,7 +736,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/ecpl-image-viewer.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/ecpl-image-viewer.component.ts:107</a></div>
                                 </td>
                             </tr>
     
@@ -664,8 +752,102 @@
 
 @Component({
   selector: &#x27;ecpl-image-viewer&#x27;,
-  templateUrl: &#x27;./ecpl-image-viewer.component.html&#x27;,
-  styleUrls: [&#x27;../src/ecpl-image-viewer.component.css&#x27;]
+  template: &#x60;
+  &lt;a href&#x3D;&quot;javascript:void(0)&quot; (click)&#x3D;&quot;showModal()&quot; id&#x3D;&quot;img-file-{{id}}&quot;&gt;
+      &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
+  &lt;/a&gt;
+
+  &lt;div class&#x3D;&quot;img-modal&quot; *ngIf&#x3D;&quot;showModalWindow&quot; id&#x3D;&quot;img-pop-{{id}}&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
+          &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+              &lt;div style&#x3D;&quot;padding: 5px;&quot;&gt;
+                  &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
+                  &lt;h3 class&#x3D;&quot;pull-left&quot;&gt;{{imgName}}&lt;/h3&gt;
+              &lt;/div&gt;
+              &lt;button (click)&#x3D;&quot;hideModal()&quot; class&#x3D;&quot;pull-right&quot;&gt;x&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+              &lt;div class&#x3D;&quot;scroller&quot;&gt;
+                  &lt;img [src]&#x3D;&quot;imgSrc&quot; alt&#x3D;&quot;&quot;&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &#x60;,
+  styles: [
+    &#x60;
+    .img-modal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10001;
+    padding: 15px;
+    }
+
+    .modal-dialog {
+        background-color: #fff;
+        border: 1px solid #f2f2f2;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    .modal-header {
+        height: 6%;
+        padding: 5px;
+        display: table-row
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    button.pull-right {
+        padding: 0 12px;
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 1px solid #dedede;
+        color: #dedede;
+    }
+
+    .modal-body {
+        width: 100%;
+        max-height: 94%;
+        overflow: auto;
+        padding: 5px;
+        background: #dedede;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .modal-body .scroller {
+        max-height: 94%;
+        overflow: auto;
+    }
+
+    .img-icon-header {
+        width: 20px;
+        height: auto;
+    }
+    &#x60;
+  ]
 })
 export class EcplImageViewerComponent implements OnInit {
   @Input() id: string;
@@ -691,28 +873,6 @@ export class EcplImageViewerComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;a href&#x3D;&quot;javascript:void(0)&quot; (click)&#x3D;&quot;showModal()&quot; id&#x3D;&quot;img-file-{{id}}&quot;&gt;
-    &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
-&lt;/a&gt;
-
-&lt;div class&#x3D;&quot;img-modal&quot; *ngIf&#x3D;&quot;showModalWindow&quot; id&#x3D;&quot;img-pop-{{id}}&quot;&gt;
-    &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
-        &lt;div class&#x3D;&quot;modal-header&quot;&gt;
-            &lt;div style&#x3D;&quot;padding: 5px;&quot;&gt;
-                &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
-                &lt;h3 class&#x3D;&quot;pull-left&quot;&gt;{{imgName}}&lt;/h3&gt;
-            &lt;/div&gt;
-            &lt;button (click)&#x3D;&quot;hideModal()&quot; class&#x3D;&quot;pull-right&quot;&gt;x&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
-            &lt;div class&#x3D;&quot;scroller&quot;&gt;
-                &lt;img [src]&#x3D;&quot;imgSrc&quot; alt&#x3D;&quot;&quot;&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
 
     <div class="tab-pane fade" id="tree">
         <div id="tree-container"></div>
