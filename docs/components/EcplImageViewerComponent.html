@@ -410,14 +410,14 @@
             <tr>
                 <td class="col-md-3">template</td>
                 <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;a href&#x3D;&quot;javascript:void(0)&quot; (click)&#x3D;&quot;showModal()&quot; id&#x3D;&quot;img-file-{{id}}&quot;&gt;
-    &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
 &lt;/a&gt;
 
 &lt;div class&#x3D;&quot;img-modal&quot; *ngIf&#x3D;&quot;showModalWindow&quot; id&#x3D;&quot;img-pop-{{id}}&quot;&gt;
     &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
         &lt;div class&#x3D;&quot;modal-header&quot;&gt;
             &lt;div style&#x3D;&quot;padding: 5px;&quot;&gt;
-                &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
+                &lt;img src&#x3D;&quot;/assets/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
                 &lt;h3 class&#x3D;&quot;pull-left&quot;&gt;{{imgName}}&lt;/h3&gt;
             &lt;/div&gt;
             &lt;button (click)&#x3D;&quot;hideModal()&quot; class&#x3D;&quot;pull-right&quot;&gt;x&lt;/button&gt;
@@ -754,14 +754,14 @@
   selector: &#x27;ecpl-image-viewer&#x27;,
   template: &#x60;
   &lt;a href&#x3D;&quot;javascript:void(0)&quot; (click)&#x3D;&quot;showModal()&quot; id&#x3D;&quot;img-file-{{id}}&quot;&gt;
-      &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
+      &lt;img src&#x3D;&quot;/assets/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot;&gt;
   &lt;/a&gt;
 
   &lt;div class&#x3D;&quot;img-modal&quot; *ngIf&#x3D;&quot;showModalWindow&quot; id&#x3D;&quot;img-pop-{{id}}&quot;&gt;
       &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
           &lt;div class&#x3D;&quot;modal-header&quot;&gt;
               &lt;div style&#x3D;&quot;padding: 5px;&quot;&gt;
-                  &lt;img src&#x3D;&quot;/src/images/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
+                  &lt;img src&#x3D;&quot;/assets/{{imgType}}.png&quot; alt&#x3D;&quot;Image File&quot; class&#x3D;&quot;img-icon-header pull-left&quot;&gt;
                   &lt;h3 class&#x3D;&quot;pull-left&quot;&gt;{{imgName}}&lt;/h3&gt;
               &lt;/div&gt;
               &lt;button (click)&#x3D;&quot;hideModal()&quot; class&#x3D;&quot;pull-right&quot;&gt;x&lt;/button&gt;
@@ -897,7 +897,7 @@ export class EcplImageViewerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><a href="javascript:void(0)" (click)="showModal()" id="img-file-{{id}}">    <img src="/src/images/{{imgType}}.png" alt="Image File"></a><div class="img-modal" *ngIf="showModalWindow" id="img-pop-{{id}}">    <div class="modal-dialog">        <div class="modal-header">            <div style="padding: 5px;">                <img src="/src/images/{{imgType}}.png" alt="Image File" class="img-icon-header pull-left">                <h3 class="pull-left">{{imgName}}</h3>            </div>            <button (click)="hideModal()" class="pull-right">x</button>        </div>        <div class="modal-body">            <div class="scroller">                <img [src]="imgSrc" alt="">            </div>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><a href="javascript:void(0)" (click)="showModal()" id="img-file-{{id}}">    <img src="/assets/{{imgType}}.png" alt="Image File"></a><div class="img-modal" *ngIf="showModalWindow" id="img-pop-{{id}}">    <div class="modal-dialog">        <div class="modal-header">            <div style="padding: 5px;">                <img src="/assets/{{imgType}}.png" alt="Image File" class="img-icon-header pull-left">                <h3 class="pull-left">{{imgName}}</h3>            </div>            <button (click)="hideModal()" class="pull-right">x</button>        </div>        <div class="modal-body">            <div class="scroller">                <img [src]="imgSrc" alt="">            </div>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'DemoComponent', 'selector': 'ecpl-demo-app'},{'name': 'EcplImageViewerComponent', 'selector': 'ecpl-image-viewer'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EcplImageViewerComponent'};
